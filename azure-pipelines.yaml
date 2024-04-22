@@ -1,0 +1,14 @@
+# Define the trigger to automatically run the pipeline on changes in the main branch
+trigger:
+  branches:
+    include:
+      - main
+
+# Define the agent pool where the pipeline will run
+pool:
+  vmImage: 'ubuntu-latest'
+
+# Define the pipeline steps
+steps:
+  - script: echo Hello World
+    displayName: 'Print Hello World'
